@@ -14,5 +14,5 @@ PG_CONFIG=$PG_PREFIX/bin/pg_config
 echo $PG_CONFIG
 sed "s|^pg_config=.*|pg_config=$PG_CONFIG|; s|^static_libpq=.*|static_libpq=1|" <setup.cfg >setup.cfg.tmp
 mv setup.cfg.tmp setup.cfg
-cat setup.cfg
+python3 setup.py build
 popd
