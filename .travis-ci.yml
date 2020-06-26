@@ -1,0 +1,5 @@
+dist: bionic
+
+install:
+  bin/fetch-deps.sh
+
