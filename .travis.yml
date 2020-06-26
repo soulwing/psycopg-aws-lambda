@@ -6,3 +6,4 @@ env:
 before_install: bin/install-pkgs.sh
 before_script: bin/fetch-deps.sh
 script: bin/build.sh
+after_success: bin/create-dist-pkg.sh
