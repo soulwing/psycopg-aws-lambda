@@ -1,5 +1,4 @@
+language: c
 dist: bionic
-
-install:
-  bin/fetch-deps.sh
+install: bin/fetch-deps.sh
 
