@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PG_DIR=postgresql-${PG_VER}
 PSY_DIR=psycopg2-${PSY_VER}
