@@ -1,3 +1,4 @@
-language: c
-install: bin/fetch-deps.sh
-script: echo "Hello world"
+language: ruby
+rvm:
+ - 2.2
+ - jruby
