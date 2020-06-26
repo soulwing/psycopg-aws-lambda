@@ -24,8 +24,6 @@ python${PY_VER} setup.py build
 pushd build/lib.linux-x86_64-${PY_VER}
 zip -q -r $DIST_FILE psycopg2/*
 popd 
-
 popd
+
 unzip -l $DIST_FILE
-
-popd
