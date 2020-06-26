@@ -1,4 +1,4 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: c
+dist: bionic
+install: bin/fetch-deps.sh
+script: echo "Hello world"
