@@ -1,2 +1,3 @@
 language: c
 install: bin/fetch-deps.sh
+script: echo "Hello world"
