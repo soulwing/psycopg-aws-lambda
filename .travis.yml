@@ -6,4 +6,10 @@ env:
 before_install: bin/install-pkgs.sh
 before_script: bin/fetch-deps.sh
 script: bin/build.sh
-after_success: bin/create-dist-pkg.sh
+before_deploy: bin/create-dist-pkg.sh
+deploy:
+  provider: releases
+  api_key: "fe778f78d036b6c1b69082b8b5dc80530d31763b"
+  file: psycopg2-aws-lambda-${PY_VER}-${PSY_VER}.zip
+  skip_cleanup: true
+  draft: true
