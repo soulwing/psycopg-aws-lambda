@@ -6,8 +6,7 @@ BASE_DIR=$PWD
 PG_DIR=postgresql-${PG_VER}
 PSY_DIR=psycopg2-${PSY_VER}
 PG_PREFIX=$BASE_DIR/build
-psy_ver_dots=$(echo $PSY_VER | sed 's/_/./g')
-DIST_FILE=$BASE_DIR/psycopg2-${PY_VER}-${psy_ver_dots}.zip
+DIST_FILE=$BASE_DIR/psycopg2-${PY_VER}-${PSY_VER_DOTS}.zip
 
 pushd $PG_DIR
 ./configure --prefix=$PG_PREFIX --without-readline --without-zlib
