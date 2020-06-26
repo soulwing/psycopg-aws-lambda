@@ -4,5 +4,5 @@ sudo apt-get update
 sudo apt-get install -y software-properties-common
 
 sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt-get install -y python${PY_VER}-dev python3-pip
+sudo apt-get install -y python${PY_VER}-dev python3.8-pip
 sudo -H python${PY_VER} pip install --upgrade pip setuptools
