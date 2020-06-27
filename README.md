@@ -34,7 +34,7 @@ Installation Instructions
    for this project.
 2. Find and download the latest version of the distribution zip for the 
    version of Python used by your lambda code. The naming convention for 
-   the distribution zip is `psycopg2-X.Y-a.b.c.zip`, where _X.Y_ is the 
+   the distribution zip is `psycopgA.B.C-X.Y.zip`, where _X.Y_ is the 
    version of Python targeted by the distribution.
 3. Download the corresponding SHA256 or MD5 hash and use it to validate 
    the downloaded zip file.

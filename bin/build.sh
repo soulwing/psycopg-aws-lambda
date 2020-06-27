@@ -4,7 +4,7 @@ BASE_DIR=$PWD
 PG_DIR=postgresql-${PG_VER}
 PSY_DIR=psycopg2-${PSY_VER}
 PG_PREFIX=$BASE_DIR/build
-DIST_FILE=$BASE_DIR/psycopg2-${PY_VER}-${PSY_VER_DOTS}.zip
+DIST_FILE=$BASE_DIR/psycopg${PSY_VER_DOTS}-${PY_VER}.zip
 
 # all non-zero exits are fatal
 set -e
