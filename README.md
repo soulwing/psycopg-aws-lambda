@@ -1,6 +1,8 @@
 psycopg2-aws-lambda
 ===================
 
+![Build Status](https://travis-ci.org/soulwing/psycopg2-aws-lambda.svg?branch=master)
+
 A build repository for a statically-linked distribution of 
 [Psycopg2](https://pypi.org/project/psycopg2/) for use with AWS Lambda.
 
