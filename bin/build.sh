@@ -4,7 +4,8 @@ BASE_DIR=$PWD
 PG_DIR=postgresql-${PG_VER}
 PSY_DIR=psycopg2-${PSY_VER}
 PG_PREFIX=$BASE_DIR/build
-DIST_FILE=$BASE_DIR/psycopg${PSY_VER_DOTS}-${PY_VER}.zip
+DIST_FILE=psycopg${PSY_VER_DOTS}-${PY_VER}.zip
+DIST_PATH=${BASE_DIR}/${DIST_FILE}
 
 # all non-zero exits are fatal
 set -e
@@ -28,14 +29,16 @@ mv setup.cfg.tmp setup.cfg
 # build psycopg2
 python${PY_VER} setup.py build
 
-# create distribution zip and hashes
+# create distribution zip
 pushd build/lib.linux-x86_64-${PY_VER}
-zip -q -r $DIST_FILE psycopg2/*
+zip -q -r $DIST_PATH psycopg2/*
+popd 
+
+# create hashes
 sha256sum $DIST_FILE >$DIST_FILE.sha256
 md5sum $DIST_FILE >$DIST_FILE.md5
 cat $DIST_FILE.sha256
 cat $DIST_FILE.md5
-popd 
 
 popd
 exit 0
