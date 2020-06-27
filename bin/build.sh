@@ -2,9 +2,10 @@
 
 BASE_DIR=$PWD
 PG_DIR=postgresql-${PG_VER}
-PSY_DIR=psycopg2-${PSY_VER}
+PSY_VER_UNDER=$(echo $PSY_VER | sed 's/\./_/g')
+PSY_DIR=psycopg2-${PSY_VER_UNDER}
 PG_PREFIX=$BASE_DIR/build
-DIST_FILE=psycopg${PSY_VER_DOTS}-${PY_VER}.zip
+DIST_FILE=psycopg${PSY_VER}-${PY_VER}.zip
 DIST_PATH=${BASE_DIR}/${DIST_FILE}
 
 # all non-zero exits are fatal

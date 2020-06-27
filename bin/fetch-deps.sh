@@ -2,7 +2,8 @@
 
 PG_SRC=postgresql-${PG_VER}.tar.gz
 PG_URL=https://ftp.postgresql.org/pub/source/v${PG_VER}/${PG_SRC}
-PSY_SRC=${PSY_VER}.tar.gz
+PSY_VER_UNDER=$(echo $PSY_VER | sed 's/\./_/g')
+PSY_SRC=${PSY_VER_UNDER}.tar.gz
 PSY_URL=https://github.com/psycopg/psycopg2/archive/${PSY_SRC}
 
 # all non-zero exits are fatal

@@ -2,10 +2,10 @@ language: c
 dist: bionic
 
 env:
-- PY_VER=3.8 PSY_VER=2_8_5 PSY_VER_DOTS=2.8.5 PG_VER=12.3
-- PY_VER=3.7 PSY_VER=2_8_5 PSY_VER_DOTS=2.8.5 PG_VER=12.3
-- PY_VER=3.6 PSY_VER=2_8_5 PSY_VER_DOTS=2.8.5 PG_VER=12.3
-- PY_VER=2.7 PSY_VER=2_8_5 PSY_VER_DOTS=2.8.5 PG_VER=12.3
+- PY_VER=3.8 PSY_VER=2.8.5 PG_VER=12.3
+- PY_VER=3.7 PSY_VER=2.8.5 PG_VER=12.3
+- PY_VER=3.6 PSY_VER=2.8.5 PG_VER=12.3
+- PY_VER=2.7 PSY_VER=2.8.5 PG_VER=12.3
 
 before_install: bin/install-pkgs.sh
 
@@ -17,9 +17,9 @@ deploy:
   provider: releases
   skip_cleanup: true
   file:
-    - "psycopg${PSY_VER_DOTS}-${PY_VER}.zip"
-    - "psycopg${PSY_VER_DOTS}-${PY_VER}.zip.sha256"
-    - "psycopg${PSY_VER_DOTS}-${PY_VER}.zip.md5"
+    - "psycopg${PSY_VER}-${PY_VER}.zip"
+    - "psycopg${PSY_VER}-${PY_VER}.zip.sha256"
+    - "psycopg${PSY_VER}-${PY_VER}.zip.md5"
   on:
     tags: true
     repo: soulwing/psycopg2-aws-lambda
