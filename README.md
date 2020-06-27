@@ -1,20 +1,20 @@
 psycopg2-aws-lambda
 ===================
 
-A build repository for a statically-linked distribution of psycopg2 for use 
-with AWS Lambda.
+A build repository for a statically-linked distribution of 
+[Psycopg2](https://pypi.org/project/psycopg2/) for use with AWS Lambda.
 
 
 Why is this Needed?
 -------------------
 
-The [Python Package Index](https://pypi.org) describes 
-[Psycopg](https://pypi.org/project/psycopg2/) as the "_most popular 
-PostgreSQL database adapter for the Python programming language_."
-Indeed, Psycopg provides a nice functional interface for interacting
-with PostgreSQL databases in Python programs. However, the default
-distribution cannot be used with AWS Lambda, because it is dynamically
-linked to the `libpq` library provided with PostgreSQL.
+The [Python Package Index](https://pypi.org) describes **Psycopg**
+as the "_most popular PostgreSQL database adapter for the Python 
+programming language_." Indeed, Psycopg provides a nice functional 
+interface for interacting with PostgreSQL databases in Python 
+programs. However, the default distribution cannot be used with AWS 
+Lambda, because it is dynamically linked to the `libpq` library 
+provided with PostgreSQL.
 
 There are (at least) two approaches to solving this problem. One would
 be to make use of AWS Lambda _layers_ to include the necessary PostgreSQL
