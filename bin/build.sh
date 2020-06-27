@@ -13,7 +13,7 @@ set -e
 
 # build postgresql
 pushd $PG_DIR
-./configure --prefix=$PG_PREFIX --without-readline --without-zlib --with-openssl
+./configure --prefix=$PG_PREFIX --without-readline --without-zlib
 make all install
 popd
 
