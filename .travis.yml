@@ -16,7 +16,7 @@ script: bin/build.sh
 
 deploy:
   provider: releases
-  cleanup: false
+  skip_cleanup: true
   file:
     - "psycopg${PSY_VER}-${PY_VER}.zip"
     - "psycopg${PSY_VER}-${PY_VER}.zip.sha256"
