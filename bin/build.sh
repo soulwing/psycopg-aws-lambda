@@ -34,11 +34,13 @@ pushd build/lib.linux-x86_64-${PY_VER}
 zip -q -r $DIST_PATH psycopg2/*
 popd 
 
+# return to base dir
+popd
+
 # create hashes
 sha256sum $DIST_FILE >$DIST_FILE.sha256
 md5sum $DIST_FILE >$DIST_FILE.md5
 cat $DIST_FILE.sha256
 cat $DIST_FILE.md5
 
-popd
 exit 0
