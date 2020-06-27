@@ -11,7 +11,7 @@ set -e
 
 # build postgresql
 pushd $PG_DIR
-./configure --prefix=$PG_PREFIX --without-readline --without-zlib
+./configure --prefix=$PG_PREFIX --without-readline --without-zlib --with-openssl
 make all install
 popd
 
@@ -20,7 +20,8 @@ pushd $PSY_DIR
 PG_CONFIG=$PG_PREFIX/bin/pg_config
 echo $PG_CONFIG
 sed "s|^pg_config=.*|pg_config=$PG_CONFIG|; \
-     s|^static_libpq=.*|static_libpq=1|" \
+     s|^static_libpq=.*|static_libpq=1|;
+     s|^libraries=.*|libraries=ssl crypto|" \
      < setup.cfg > setup.cfg.tmp
 mv setup.cfg.tmp setup.cfg
 
