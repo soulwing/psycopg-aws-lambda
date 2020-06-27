@@ -1,4 +1,5 @@
 language: c
+os: linux
 dist: bionic
 
 env:
@@ -15,7 +16,7 @@ script: bin/build.sh
 
 deploy:
   provider: releases
-  skip_cleanup: true
+  cleanup: false
   file:
     - "psycopg${PSY_VER}-${PY_VER}.zip"
     - "psycopg${PSY_VER}-${PY_VER}.zip.sha256"
@@ -23,5 +24,5 @@ deploy:
   on:
     tags: true
     repo: soulwing/psycopg2-aws-lambda
-  api_key:
+  token:
     secure: fapN/pSC8SsKI2lRaogCIzEICv71jIj+hqm4qJMtODLL00sG+VhS0Yc0eapolCVix4AuzXx6QWIW20l+ShTYKFzZ7W6TAZM3xrM+DdAT0xEHds1/uTaAPMGF2OwTOuv7ytBZJ57FL6O+47zG/mQd1ltpiT3DcLVbpaoKLro0G7L+wBYKlmlKL0uzV8I9HLO2xPuZ+KL0afXIPTCJaxlUH8zXqTUfJ/CYhMbZT8ilmlIx7LtcsFGO5PoCaPwng1iSI/tkyjVe8lzbONdVZDpbSqvP28LGkQRj3cTV9ZwkyR+OHtOiK19pQa0ijrPV5GKEo/mZ8z1ugr5Jk+jIJbI9bAjvFEYKKH3m89LHgmwsJSrc6Y/hm1I0+/hlQrZe7rXwAy+Xch51L+8F2O+hlGt1RX5lzhzqEpRierq/0DTQqNKYm1eX33Mlzvwi1iRwHceEeo3UMNO7h4bH+OtAEGcF7c7Xzm6k3FNhKoZDslPKdgjT0GA0tvIS7K59EBTI+oxA4yJDglX9RKkfPxDIr7Pp7/YZcmSjLf6qM3LIgAF6B3drJ4lyojEWFxYx5/Bg/+HZ2waWOW5+ZbMkU0JPVCvTLodl9yNVmHYTwWdnyRSM/7UAfYignjUeMajNfUEI6zzf1fo6GHZXgNKfLBXfYkEF4lnXLQ/WQxVAvxgv6qPV57U=
