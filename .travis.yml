@@ -3,10 +3,10 @@ os: linux
 dist: bionic
 
 env:
-- PY_VER=3.8 PSY_VER=2.8.5 PG_VER=12.3
-- PY_VER=3.7 PSY_VER=2.8.5 PG_VER=12.3
-- PY_VER=3.6 PSY_VER=2.8.5 PG_VER=12.3
-- PY_VER=2.7 PSY_VER=2.8.5 PG_VER=12.3
+- PY_VER=3.8 PSY_VER=2.8.5 PG_VER=11.8
+- PY_VER=3.7 PSY_VER=2.8.5 PG_VER=11.8
+- PY_VER=3.6 PSY_VER=2.8.5 PG_VER=11.8
+- PY_VER=2.7 PSY_VER=2.8.5 PG_VER=11.8
 
 before_install: bin/install-pkgs.sh
 

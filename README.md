@@ -87,6 +87,10 @@ experiences reported by others, it seems that the recommended approach is
 to build PostgreSQL client applications that use `libpq` using the latest 
 stable version of that library. The development community for PostgreSQL 
 has demonstrated a solid history of maintaining both backward and forward 
-compatibility between `libpq` and the PostgreSQL server. For this reason, 
-this project is generally built using the latest stable version of 
-PostgreSQL when creating new tagged builds.
+compatibility between `libpq` and the PostgreSQL server. 
+
+Ideally, this project would be built using the latest stable version of 
+PostgreSQL. However, as of version 12.x, it appears that PostgreSQL has
+some dependency on `libcrypto` even when OpenSSL support is not 
+configured. Not sure what/why. Until this can be resolved, this project
+builds against PostgreSQL 11.x.
